@@ -10,8 +10,9 @@
 
 /* About */
 #pic img{
-    width: 300px;
-    height: 175px;
+    width: 150px;
+    height: 150px;
+
 
 }
 #intro h2{
@@ -20,9 +21,10 @@
 
 /* Education */
 .gallery img{
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 15px;
     margin: 10px;
+   
 }
 
 /* contact */
@@ -34,5 +36,5 @@
     width: 70%;
 }
 #send{
-    width: 20%;
+    width: 16%;
 }

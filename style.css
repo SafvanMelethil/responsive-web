@@ -176,16 +176,16 @@ html{
     margin: 20px 0px;
 }
 .input{
-    padding: 12px;
-    margin: 15px;
-    width: 30%;
+    padding: 15px;
+    margin: 40px;
+    width: 50%;
     border: none;
     outline: none;
 }
 #msg{
-    width: 20%;
-    padding: 10px;
-    margin: 18px;
+    width: 80%;
+    padding: 40px;
+    margin: 40px;
     border: none;
     outline: none;
     
@@ -199,5 +199,5 @@ html{
 }
 #send:hover{
     cursor: pointer;
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 50px grey;
 }
