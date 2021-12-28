@@ -7,21 +7,29 @@
          <link rel="stylesheet" href="style.css">
          <link rel="stylesheet" media="screen and (max-width:800px)" 
          href="tablet.css">
+         <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      </head>
      <body>
          <nav class="navbar">
              <ul>
+                
                  <li><a href="#home">Home</a></li>
                  <li><a href="#about">About Me</a></li>
                  <li><a href="#education">Education</a></li>
                  <li><a href="#contact">contact me</a></li>
+                 <iframe src="https://free.timeanddate.com/clock/i84ortkn/n1899/fn7/fs20/tct/pct/ftb/pd2/th2" frameborder="0" width="128" height="30" allowtransparency="true"></iframe>
+                 
+
+
              </ul>
          </nav>
+         
          <section id="home">
              <div class="main">
                  <h1 class="headings">I AM <br> SAFVAN MELETHIL </h1>
                  <button class="btn">
-                     Hire me
+                     Hire 
                  </button>
              </div>
          </section>
@@ -45,15 +53,7 @@
         I have completed all my schooling from Saudi Arabia under CBSE. Later when i got stucked in Saudia i have moved to learning tech through various platforms <br>
     and have attended various tech events and gained needful knowledges in Different fields. <br>
 my interested fields are.
-<br>
-<br> 
-WEB DEVELOPMENT <br>
-WEB DESIGNING <br>
-APP DEVELOPING <br>
-VIDEO EDITING <br>
-ARTIFICIAL INTELLIGENCE <br>
 
-<br>
 Tho i come up with absolutely zero knowledge from school in tech field, various modes have helped me 
 to enter into the world of technology.
 
@@ -111,14 +111,39 @@ to enter into the world of technology.
          
          <section id="contact">
              <h1 class="headings">CONTACT</h1>
-             <form action="" class="form">
-                <input type="text" name="name" class="input" placeholder="Enter your name">
-                <input type="email" name="email" class="input" placeholder="Enter your email">
-                <textarea name="msg" id="msg" cols="30" rows="10"placeholder="Enter your Message"></textarea>
-                <input type="submit" value="SEND" id="send">
+             <form action="" id="form">
+                 <input type="text" name="name" class="input" placeholder="Enter Your Name">
+                 <input type="email" name="email" class="input" placeholder="Enter Your Mail">
+                 <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                 <input type="submit" value="SEND" id="send">
+
+         </form>
+                
              </form>
+             
+             
          </section>
          
          </div>
+         
+         <script>
+            $("#form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbyr_0b-5npPHYMfLW_D9dXHvJIGeuNobQkpfcvB26aKN6dGu3Mg7jzS37I29d7hEUmM/exec",
+                    data:$("#form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+        </script>
      </body>
  </html>
